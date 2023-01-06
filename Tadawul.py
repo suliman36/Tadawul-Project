@@ -10,7 +10,7 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center; color: #505050	;'>Stock Trend Prediction</h1>", unsafe_allow_html=True)
 user_input = st.text_input('Enter Stock Trading Name' )
-df = pd.read_csv(r'C:\Users\sily\Downloads\Tadawul-Project\Tadawul_stocks_Prepro.csv')
+df = pd.read_csv(r'https://raw.githubusercontent.com/suliman36/Tadawul-Project/main/Tadawul_stocks_Prepro.csv')
 df['date'] = pd.to_datetime(df.date, format='%m/%d/%Y')
 df = df[df['trading_name '] == user_input]
 
